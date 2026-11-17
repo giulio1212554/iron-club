@@ -1,6 +1,8 @@
 export const gym = {
   name: "IRON CLUB",
-  tagline: "Allenati. Trasformati. Domina.",
+  tagline: "Built for Your Fitness Lifestyle.",
+  subtitle:
+    "Your goals, your pace, our proven programs — crafted to help you train with purpose and transform with confidence.",
   description:
     "Palestra di forza e performance. Attrezzature di livello, coach certificati e programmi su misura.",
   phone: "+39 02 9876 5432",
@@ -13,101 +15,82 @@ export const gym = {
 
 export const programs = [
   {
-    title: "Strength Training",
-    desc: "Forza massimale, powerlifting e progressive overload con coach dedicati.",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
+    title: "Strength & Weight Training",
+    desc: "Challenge yourself with free weights, machines and progressive programs for real strength gains.",
   },
   {
-    title: "HIIT & Conditioning",
-    desc: "Sessioni ad alta intensità per bruciare grassi e migliorare la resistenza.",
-    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80",
+    title: "High-Intensity Group Workouts",
+    desc: "High-energy HIIT classes that push cardio, endurance and fat burn in every session.",
   },
   {
-    title: "Personal Training",
-    desc: "Piani 1:1 personalizzati su obiettivi, postura e alimentazione.",
-    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80",
+    title: "One-on-One Personal Training",
+    desc: "Work directly with certified coaches who tailor every plan to your body and goals.",
   },
   {
-    title: "Functional & Mobility",
-    desc: "Movimento funzionale, core e mobilità per performare meglio e prevenire infortuni.",
-    image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=800&q=80",
+    title: "Cardio & Endurance Zones",
+    desc: "Enhance speed and conditioning through structured cardio training and recovery zones.",
   },
 ];
 
 export const trainers = [
   {
-    name: "Marco Rossi",
-    role: "Head Coach · Strength",
+    name: "Liam Carter",
+    role: "Strength Coach",
     image: "https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=600&q=80",
   },
   {
-    name: "Giulia Bianchi",
-    role: "Coach HIIT & Conditioning",
+    name: "Ava Mitchell",
+    role: "HIIT & Conditioning",
     image: "https://images.unsplash.com/photo-1594381898411-846e7d193883?w=600&q=80",
   },
   {
-    name: "Luca Ferri",
-    role: "Personal Trainer",
+    name: "Noah Hernandez",
+    role: "Performance Coach",
     image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80",
   },
 ];
 
 export const plans = [
   {
-    name: "Basic",
-    price: "39",
-    period: "/mese",
-    features: ["Accesso sala pesi", "Orario standard", "App workout", "Spogliatoi"],
+    name: "Core Plan",
+    price: "49",
+    period: "/month",
+    features: ["Full gym access", "Group classes", "Locker rooms", "App tracking"],
     featured: false,
   },
   {
-    name: "Pro",
-    price: "69",
-    period: "/mese",
+    name: "Elite Plan",
+    price: "89",
+    period: "/month",
     features: [
-      "Tutto Basic",
-      "Classi HIIT illimitate",
-      "1 sessione PT / mese",
+      "Everything in Core",
+      "Unlimited HIIT",
+      "2 PT sessions / month",
       "Sauna & recovery",
-      "Priorità booking",
+      "Priority booking",
     ],
     featured: true,
   },
-  {
-    name: "Elite",
-    price: "119",
-    period: "/mese",
-    features: [
-      "Tutto Pro",
-      "4 sessioni PT / mese",
-      "Piano nutrizione",
-      "Accesso 24/7",
-      "Guest pass mensile",
-    ],
-    featured: false,
-  },
+];
+
+export const stats = [
+  { value: "10+", label: "Years Experience" },
+  { value: "25+", label: "Expert Coaches" },
+  { value: "2500+", label: "Active Members" },
+  { value: "98%", label: "Success Rate" },
 ];
 
 export const testimonials = [
   {
-    text: "In 6 mesi ho raddoppiato i carichi sullo squat. Coach e ambiente al top.",
-    name: "Andrea M.",
+    text: "IRON CLUB changed how I train. Stronger, more focused, and part of a real community.",
+    name: "Marco B.",
   },
   {
-    text: "Finalmente una palestra seria, senza code e con attrezzature sempre in ordine.",
-    name: "Sara T.",
+    text: "The coaches push you hard but smart. Best decision I made for my fitness.",
+    name: "Elena R.",
   },
   {
-    text: "Il programma personalizzato ha cambiato il mio approccio all'allenamento.",
-    name: "Davide R.",
+    text: "Clean space, serious equipment, zero fluff. Exactly what I needed.",
+    name: "Davide S.",
   },
-];
-
-export const facilities = [
-  "Sala pesi free-weight completa",
-  "Rack e piattaforme olimpiche",
-  "Zona cardio premium",
-  "Studio HIIT dedicato",
-  "Sauna e area recovery",
-  "Spogliatoi e docce",
 ];
