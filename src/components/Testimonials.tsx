@@ -9,7 +9,7 @@ export default function Testimonials() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <h2 className="font-display text-4xl md:text-5xl tracking-wide">
-            What Our Members Say About Their IRON CLUB Experience
+            Cosa dicono i nostri membri
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">

@@ -11,12 +11,12 @@ export default function Programs() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
           <div>
             <p className="text-lime text-sm font-semibold uppercase tracking-wider mb-2">
-              Programs
+              Programmi
             </p>
             <h2 className="font-display text-4xl md:text-5xl tracking-wide">
-              Strength & Weight
+              Forza e
               <br />
-              Training
+              allenamento
             </h2>
           </div>
         </div>

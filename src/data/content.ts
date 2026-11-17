@@ -1,8 +1,8 @@
 export const gym = {
   name: "IRON CLUB",
-  tagline: "Built for Your Fitness Lifestyle.",
+  tagline: "Costruito per il tuo stile di vita fitness.",
   subtitle:
-    "Your goals, your pace, our proven programs — crafted to help you train with purpose and transform with confidence.",
+    "I tuoi obiettivi, il tuo ritmo, i nostri programmi collaudati — per allenarti con uno scopo e trasformarti con fiducia.",
   description:
     "Palestra di forza e performance. Attrezzature di livello, coach certificati e programmi su misura.",
   phone: "+39 02 9876 5432",
@@ -15,82 +15,82 @@ export const gym = {
 
 export const programs = [
   {
-    title: "Strength & Weight Training",
-    desc: "Challenge yourself with free weights, machines and progressive programs for real strength gains.",
+    title: "Forza e pesi",
+    desc: "Pesi liberi, macchinari e programmi progressivi per guadagni di forza reali.",
   },
   {
-    title: "High-Intensity Group Workouts",
-    desc: "High-energy HIIT classes that push cardio, endurance and fat burn in every session.",
+    title: "Allenamenti di gruppo HIIT",
+    desc: "Classi ad alta energia che spingono cardio, resistenza e consumo di grassi.",
   },
   {
-    title: "One-on-One Personal Training",
-    desc: "Work directly with certified coaches who tailor every plan to your body and goals.",
+    title: "Personal training 1:1",
+    desc: "Lavori direttamente con coach certificati su un piano su misura per te.",
   },
   {
-    title: "Cardio & Endurance Zones",
-    desc: "Enhance speed and conditioning through structured cardio training and recovery zones.",
+    title: "Zone cardio e endurance",
+    desc: "Velocità e condizionamento con percorsi strutturati e aree recovery.",
   },
 ];
 
 export const trainers = [
   {
-    name: "Liam Carter",
-    role: "Strength Coach",
+    name: "Marco Rossi",
+    role: "Coach forza",
     image: "https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=600&q=80",
   },
   {
-    name: "Ava Mitchell",
-    role: "HIIT & Conditioning",
+    name: "Giulia Bianchi",
+    role: "Coach HIIT e conditioning",
     image: "https://images.unsplash.com/photo-1594381898411-846e7d193883?w=600&q=80",
   },
   {
-    name: "Noah Hernandez",
-    role: "Performance Coach",
+    name: "Luca Ferri",
+    role: "Performance coach",
     image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80",
   },
 ];
 
 export const plans = [
   {
-    name: "Core Plan",
+    name: "Piano Core",
     price: "49",
-    period: "/month",
-    features: ["Full gym access", "Group classes", "Locker rooms", "App tracking"],
+    period: "/mese",
+    features: ["Accesso completo in sala", "Classi di gruppo", "Spogliatoi", "App di tracking"],
     featured: false,
   },
   {
-    name: "Elite Plan",
+    name: "Piano Elite",
     price: "89",
-    period: "/month",
+    period: "/mese",
     features: [
-      "Everything in Core",
-      "Unlimited HIIT",
-      "2 PT sessions / month",
-      "Sauna & recovery",
-      "Priority booking",
+      "Tutto il Core",
+      "HIIT illimitato",
+      "2 sessioni PT / mese",
+      "Sauna e recovery",
+      "Prenotazione prioritaria",
     ],
     featured: true,
   },
 ];
 
 export const stats = [
-  { value: "10+", label: "Years Experience" },
-  { value: "25+", label: "Expert Coaches" },
-  { value: "2500+", label: "Active Members" },
-  { value: "98%", label: "Success Rate" },
+  { value: "10+", label: "Anni di esperienza" },
+  { value: "25+", label: "Coach esperti" },
+  { value: "2500+", label: "Membri attivi" },
+  { value: "98%", label: "Tasso di successo" },
 ];
 
 export const testimonials = [
   {
-    text: "IRON CLUB changed how I train. Stronger, more focused, and part of a real community.",
+    text: "IRON CLUB ha cambiato il mio modo di allenarmi. Più forte, più concentrato, parte di una vera community.",
     name: "Marco B.",
   },
   {
-    text: "The coaches push you hard but smart. Best decision I made for my fitness.",
+    text: "I coach ti spingono forte ma con metodo. La scelta migliore per la mia forma fisica.",
     name: "Elena R.",
   },
   {
-    text: "Clean space, serious equipment, zero fluff. Exactly what I needed.",
+    text: "Spazio pulito, attrezzature serie, zero fronzoli. Esattamente quello che cercavo.",
     name: "Davide S.",
   },
 ];

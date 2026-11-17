@@ -10,10 +10,10 @@ export default function Membership() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <p className="text-lime text-sm font-semibold uppercase tracking-wider mb-2">
-            Pricing
+            Prezzi
           </p>
           <h2 className="font-display text-4xl md:text-5xl tracking-wide">
-            Choose the Plan That Fits Your Fitness Lifestyle
+            Scegli il piano adatto al tuo stile di vita
           </h2>
         </div>
         <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
@@ -33,7 +33,7 @@ export default function Membership() {
             >
               <h3 className="font-display text-2xl tracking-wide">{plan.name}</h3>
               <p className="mt-4">
-                <span className="font-display text-5xl">${plan.price}</span>
+                <span className="font-display text-5xl">€{plan.price}</span>
                 <span className={cn("text-sm", plan.featured ? "text-iron/60" : "text-white/50")}>
                   {plan.period}
                 </span>
@@ -54,7 +54,7 @@ export default function Membership() {
                     : "bg-lime text-iron hover:bg-lime-400"
                 )}
               >
-                Get Started
+                Inizia ora
               </a>
             </motion.div>
           ))}

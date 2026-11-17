@@ -13,8 +13,8 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-wide leading-[0.95] max-w-4xl mx-auto"
         >
-          Built for Your{" "}
-          <span className="text-lime">Fitness</span> Lifestyle.
+          Costruito per il tuo stile di vita{" "}
+          <span className="text-lime">Fitness</span>.
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 16 }}
@@ -34,7 +34,7 @@ export default function Hero() {
             href="#membership"
             className="inline-flex items-center gap-2 rounded-full bg-lime px-7 py-3.5 text-sm font-bold text-iron hover:bg-lime-400 transition shadow-lg shadow-lime/20"
           >
-            BOOK NOW
+            PRENOTA ORA
             <span className="flex h-7 w-7 items-center justify-center rounded-full bg-iron text-lime">
               <ArrowRight className="h-4 w-4" />
             </span>
@@ -47,12 +47,13 @@ export default function Hero() {
           transition={{ delay: 0.3 }}
           className="mt-12 relative mx-auto max-w-4xl"
         >
-          <div className="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+          <div className="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10 bg-iron-700">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://images.unsplash.com/photo-1599058945522-28d584b6f14f?w=1400&q=80"
-              alt="Athlete training"
+              src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1400&q=80"
+              alt="Atleta in allenamento"
               className="h-full w-full object-cover"
+              loading="eager"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-iron/60 to-transparent" />
           </div>
@@ -66,7 +67,7 @@ export default function Hero() {
               key={i}
               className="mx-6 font-display text-2xl tracking-wider text-iron"
             >
-              Workout
+              Allenamento
             </span>
           ))}
         </div>

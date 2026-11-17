@@ -13,18 +13,18 @@ export default function About() {
           viewport={{ once: true }}
           className="rounded-3xl border border-white/10 bg-iron-700 overflow-hidden"
         >
-          <div className="relative aspect-[4/3]">
+          <div className="relative aspect-[4/3] bg-iron-600">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80"
-              alt="Gym floor"
+              alt="Sala pesi IRON CLUB"
               className="h-full w-full object-cover"
             />
           </div>
           <div className="p-6 md:p-8">
             <h2 className="font-display text-3xl md:text-4xl tracking-wide leading-tight">
-              Discover a Gym That Trains You to Be{" "}
-              <span className="text-lime">Stronger, Fitter,</span> and More Focused
+              Una palestra che ti allena a essere{" "}
+              <span className="text-lime">più forte, in forma</span> e concentrato
             </h2>
           </div>
         </motion.div>
@@ -38,25 +38,25 @@ export default function About() {
           <div className="rounded-3xl bg-lime p-8 md:p-10 text-iron flex-1 flex flex-col justify-between">
             <div>
               <p className="text-sm font-semibold uppercase tracking-wider opacity-70">
-                About IRON CLUB
+                Chi siamo
               </p>
               <p className="mt-4 text-4xl md:text-5xl font-display tracking-wide leading-none">
-                Trusted by Over
+                Scelti da oltre
                 <br />
-                1,000 Members
+                1.000 membri
               </p>
             </div>
             <p className="mt-6 text-iron/80 text-sm leading-relaxed">
-              At IRON CLUB, our community isn&apos;t just showing up — they&apos;re leveling up.
-              From newcomers to elite athletes, every member pushes harder and supports
-              one another through every rep.
+              In IRON CLUB la community non si limita a presentarsi: sale di livello.
+              Dai principianti agli atleti, ogni membro spinge più forte e supporta
+              gli altri in ogni ripetizione.
             </p>
           </div>
           <a
             href="#programs"
             className="inline-flex items-center gap-2 self-start rounded-full border border-white/20 px-5 py-2.5 text-sm font-semibold text-white hover:border-lime hover:text-lime transition"
           >
-            Read More About Us
+            Scopri di più
             <ArrowRight className="h-4 w-4" />
           </a>
         </motion.div>

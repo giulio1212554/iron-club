@@ -9,7 +9,7 @@ export default function Stats() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="font-display text-3xl md:text-4xl tracking-wide">
-            Proven Numbers. Powerful Results.
+            Numeri concreti. Risultati reali.
           </h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

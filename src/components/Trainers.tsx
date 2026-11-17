@@ -12,7 +12,7 @@ export default function Trainers() {
             Team
           </p>
           <h2 className="font-display text-4xl md:text-5xl tracking-wide">
-            Expert Trainers Who Inspire Results
+            Coach esperti che ispirano risultati
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
@@ -25,7 +25,7 @@ export default function Trainers() {
               transition={{ delay: i * 0.1 }}
               className="rounded-3xl border border-white/10 bg-iron overflow-hidden group"
             >
-              <div className="relative aspect-[3/4] overflow-hidden">
+              <div className="relative aspect-[3/4] overflow-hidden bg-iron-700">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={t.image}

@@ -6,11 +6,11 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { href: "#about", label: "About" },
-  { href: "#programs", label: "Programs" },
-  { href: "#trainers", label: "Trainers" },
-  { href: "#membership", label: "Pricing" },
-  { href: "#contact", label: "Contact" },
+  { href: "#about", label: "Chi siamo" },
+  { href: "#programs", label: "Programmi" },
+  { href: "#trainers", label: "Coach" },
+  { href: "#membership", label: "Prezzi" },
+  { href: "#contact", label: "Contatti" },
 ];
 
 export default function Header() {
