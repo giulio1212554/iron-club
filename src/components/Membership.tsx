@@ -6,17 +6,17 @@ import { cn } from "@/lib/utils";
 
 export default function Membership() {
   return (
-    <section id="membership" className="py-20 md:py-28 bg-iron-800">
+    <section id="membership" className="py-20 md:py-28 bg-iron">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <p className="text-cyan text-sm uppercase tracking-[0.2em] font-semibold mb-3">
-            Abbonamenti
+          <p className="text-lime text-sm font-semibold uppercase tracking-wider mb-2">
+            Pricing
           </p>
           <h2 className="font-display text-4xl md:text-5xl tracking-wide">
-            SCEGLI IL TUO PIANO
+            Choose the Plan That Fits Your Fitness Lifestyle
           </h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {plans.map((plan, i) => (
             <motion.div
               key={plan.name}
@@ -25,26 +25,23 @@ export default function Membership() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               className={cn(
-                "rounded-2xl border p-8 flex flex-col",
+                "rounded-3xl border p-8 flex flex-col",
                 plan.featured
-                  ? "border-cyan bg-cyan/5 scale-[1.02] shadow-xl shadow-cyan/10"
-                  : "border-white/10 bg-iron-700"
+                  ? "border-lime bg-lime text-iron"
+                  : "border-white/10 bg-iron-700 text-white"
               )}
             >
-              {plan.featured && (
-                <span className="self-start text-xs font-bold uppercase tracking-wider bg-cyan text-iron px-3 py-1 rounded-full mb-4">
-                  Più scelto
-                </span>
-              )}
               <h3 className="font-display text-2xl tracking-wide">{plan.name}</h3>
               <p className="mt-4">
-                <span className="font-display text-5xl text-cyan">€{plan.price}</span>
-                <span className="text-white/50 text-sm">{plan.period}</span>
+                <span className="font-display text-5xl">${plan.price}</span>
+                <span className={cn("text-sm", plan.featured ? "text-iron/60" : "text-white/50")}>
+                  {plan.period}
+                </span>
               </p>
               <ul className="mt-6 space-y-3 flex-1">
                 {plan.features.map((f) => (
-                  <li key={f} className="text-sm text-white/70 flex gap-2">
-                    <span className="text-cyan">✓</span> {f}
+                  <li key={f} className="text-sm flex gap-2">
+                    <span>✓</span> {f}
                   </li>
                 ))}
               </ul>
@@ -53,11 +50,11 @@ export default function Membership() {
                 className={cn(
                   "mt-8 block text-center rounded-full py-3 text-sm font-bold transition",
                   plan.featured
-                    ? "bg-cyan text-iron hover:bg-cyan-400"
-                    : "border border-white/20 text-white hover:border-cyan hover:text-cyan"
+                    ? "bg-iron text-lime hover:bg-iron-700"
+                    : "bg-lime text-iron hover:bg-lime-400"
                 )}
               >
-                Inizia ora
+                Get Started
               </a>
             </motion.div>
           ))}

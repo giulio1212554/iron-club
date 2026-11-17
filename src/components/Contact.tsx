@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { gym } from "@/data/content";
-import { Mail, MapPin, Phone, Clock } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
@@ -13,87 +13,64 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-iron-800">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12">
-        <div>
-          <p className="text-cyan text-sm uppercase tracking-[0.2em] font-semibold mb-3">
-            Contatti
-          </p>
-          <h2 className="font-display text-4xl md:text-5xl tracking-wide">
-            ENTRA NEL CLUB
-          </h2>
-          <p className="mt-4 text-white/60">
-            Scrivici o passa in palestra. Ti facciamo fare un tour gratuito.
-          </p>
-          <div className="mt-10 space-y-5">
-            <a href={`tel:${gym.phoneRaw}`} className="flex items-center gap-3 text-white/80 hover:text-cyan">
-              <Phone className="h-5 w-5 text-cyan" /> {gym.phone}
-            </a>
-            <a href={`mailto:${gym.email}`} className="flex items-center gap-3 text-white/80 hover:text-cyan">
-              <Mail className="h-5 w-5 text-cyan" /> {gym.email}
-            </a>
-            <p className="flex items-center gap-3 text-white/80">
-              <MapPin className="h-5 w-5 text-cyan" /> {gym.address}
-            </p>
-            <p className="flex items-center gap-3 text-white/80">
-              <Clock className="h-5 w-5 text-cyan" /> {gym.hours}
-            </p>
+    <section id="contact" className="py-20 md:py-28 bg-iron">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-white/10 bg-iron-800 overflow-hidden">
+          <div className="grid lg:grid-cols-2">
+            <div className="p-8 md:p-12 flex flex-col justify-center">
+              <h2 className="font-display text-4xl md:text-5xl tracking-wide leading-tight">
+                Ready to Commit? Let&apos;s Build Your{" "}
+                <span className="text-lime">Strongest Self.</span>
+              </h2>
+              <p className="mt-4 text-white/50 text-sm">
+                {gym.address} · {gym.hours}
+              </p>
+              <a
+                href={`tel:${gym.phoneRaw}`}
+                className="mt-4 text-lime font-semibold hover:underline"
+              >
+                {gym.phone}
+              </a>
+            </div>
+
+            <div className="p-8 md:p-12 bg-iron-700/50 border-t lg:border-t-0 lg:border-l border-white/10">
+              {sent ? (
+                <div className="h-full flex items-center justify-center text-center">
+                  <div>
+                    <p className="font-display text-3xl text-lime">REQUEST SENT</p>
+                    <p className="mt-2 text-white/60 text-sm">We&apos;ll get back to you soon.</p>
+                  </div>
+                </div>
+              ) : (
+                <form onSubmit={onSubmit} className="space-y-4">
+                  <input
+                    required
+                    placeholder="Your name"
+                    className="w-full rounded-xl border border-white/10 bg-iron px-4 py-3 text-white placeholder:text-white/30 focus:border-lime focus:outline-none"
+                  />
+                  <input
+                    type="email"
+                    required
+                    placeholder="Email"
+                    className="w-full rounded-xl border border-white/10 bg-iron px-4 py-3 text-white placeholder:text-white/30 focus:border-lime focus:outline-none"
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Phone"
+                    className="w-full rounded-xl border border-white/10 bg-iron px-4 py-3 text-white placeholder:text-white/30 focus:border-lime focus:outline-none"
+                  />
+                  <button
+                    type="submit"
+                    className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-lime py-3.5 text-sm font-bold text-iron hover:bg-lime-400 transition"
+                  >
+                    BOOK NOW
+                    <ArrowRight className="h-4 w-4" />
+                  </button>
+                </form>
+              )}
+            </div>
           </div>
         </div>
-
-        {sent ? (
-          <div className="rounded-2xl border border-cyan/30 bg-cyan/5 p-10 flex items-center justify-center text-center">
-            <div>
-              <p className="font-display text-3xl text-cyan">RICHIESTA INVIATA</p>
-              <p className="mt-2 text-white/70">Ti ricontattiamo a breve.</p>
-            </div>
-          </div>
-        ) : (
-          <form onSubmit={onSubmit} className="rounded-2xl border border-white/10 bg-iron p-6 md:p-8 space-y-4">
-            <div>
-              <label className="text-sm text-white/60">Nome</label>
-              <input
-                required
-                className="mt-1 w-full rounded-xl border border-white/10 bg-iron-700 px-4 py-3 text-white focus:border-cyan focus:outline-none"
-                placeholder="Il tuo nome"
-              />
-            </div>
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label className="text-sm text-white/60">Email</label>
-                <input
-                  type="email"
-                  required
-                  className="mt-1 w-full rounded-xl border border-white/10 bg-iron-700 px-4 py-3 text-white focus:border-cyan focus:outline-none"
-                  placeholder="email@esempio.it"
-                />
-              </div>
-              <div>
-                <label className="text-sm text-white/60">Telefono</label>
-                <input
-                  type="tel"
-                  required
-                  className="mt-1 w-full rounded-xl border border-white/10 bg-iron-700 px-4 py-3 text-white focus:border-cyan focus:outline-none"
-                  placeholder="+39 ..."
-                />
-              </div>
-            </div>
-            <div>
-              <label className="text-sm text-white/60">Messaggio</label>
-              <textarea
-                rows={4}
-                className="mt-1 w-full rounded-xl border border-white/10 bg-iron-700 px-4 py-3 text-white focus:border-cyan focus:outline-none resize-none"
-                placeholder="Obiettivi, orari preferiti..."
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full rounded-full bg-cyan py-3.5 text-sm font-bold text-iron hover:bg-cyan-400 transition"
-            >
-              Invia richiesta
-            </button>
-          </form>
-        )}
       </div>
     </section>
   );
