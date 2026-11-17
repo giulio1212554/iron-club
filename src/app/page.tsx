@@ -1,23 +1,21 @@
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Programs from "@/components/Programs";
 import Stats from "@/components/Stats";
-import Trainers from "@/components/Trainers";
+import Services from "@/components/Services";
+import WhyUs from "@/components/WhyUs";
 import Membership from "@/components/Membership";
 import Testimonials from "@/components/Testimonials";
-import Contact from "@/components/Contact";
+import FinalCta from "@/components/FinalCta";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <About />
-      <Programs />
       <Stats />
-      <Trainers />
+      <Services />
+      <WhyUs />
       <Membership />
       <Testimonials />
-      <Contact />
+      <FinalCta />
     </>
   );
 }

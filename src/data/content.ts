@@ -1,96 +1,111 @@
 export const gym = {
   name: "IRON CLUB",
-  tagline: "Costruito per il tuo stile di vita fitness.",
+  tagline: "ALLENA IL TUO POTENZIALE.",
+  eyebrow: "IL TUO NUOVO INIZIO",
   subtitle:
-    "I tuoi obiettivi, il tuo ritmo, i nostri programmi collaudati — per allenarti con uno scopo e trasformarti con fiducia.",
+    "Più energia. Più forza. Più te stesso. Uno spazio progettato per superare i tuoi limiti, con coach preparati e attrezzatura di livello.",
   description:
     "Palestra di forza e performance. Attrezzature di livello, coach certificati e programmi su misura.",
-  phone: "+39 02 9876 5432",
-  phoneRaw: "390298765432",
-  whatsapp: "393331112233",
+  phone: "081 000 0000",
+  phoneRaw: "390810000000",
   email: "info@ironclub.it",
-  address: "Via della Forza 8, 20100 Milano",
-  hours: "Lun–Dom 06:00–23:00",
+  address: "Via Esempio 12, Napoli",
+  rating: "★ 4.9/5   ·   ALLENATI AL TUO RITMO",
 };
 
-export const programs = [
+export const stats = [
+  { value: "1.200+", label: "MEMBRI ATTIVI" },
+  { value: "24/7", label: "ENERGIA" },
+  { value: "35+", label: "CORSI A SETTIMANA" },
+  { value: "12", label: "COACH CERTIFICATI" },
+];
+
+export const services = [
   {
-    title: "Forza e pesi",
-    desc: "Pesi liberi, macchinari e programmi progressivi per guadagni di forza reali.",
+    n: "01",
+    tag: "FORZA",
+    title: "AREA PESI",
+    desc: "Attrezzatura professionale e spazio per allenare ogni gruppo muscolare.",
   },
   {
-    title: "Allenamenti di gruppo HIIT",
-    desc: "Classi ad alta energia che spingono cardio, resistenza e consumo di grassi.",
+    n: "02",
+    tag: "ENERGIA",
+    title: "CORSI FITNESS",
+    desc: "Sessioni guidate, energia di gruppo e coach che ti motivano.",
   },
   {
-    title: "Personal training 1:1",
-    desc: "Lavori direttamente con coach certificati su un piano su misura per te.",
-  },
-  {
-    title: "Zone cardio e endurance",
-    desc: "Velocità e condizionamento con percorsi strutturati e aree recovery.",
+    n: "03",
+    tag: "RISULTATI",
+    title: "PERSONAL TRAINING",
+    desc: "Programmi personalizzati, tecnica corretta e obiettivi misurabili.",
   },
 ];
 
-export const trainers = [
+export const benefits = [
   {
-    name: "Marco Rossi",
-    role: "Coach forza",
-    image: "https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=600&q=80",
+    title: "Coach presenti",
+    desc: "Ti seguiamo davvero, dal primo giorno.",
   },
   {
-    name: "Giulia Bianchi",
-    role: "Coach HIIT e conditioning",
-    image: "https://images.unsplash.com/photo-1594381898411-846e7d193883?w=600&q=80",
+    title: "Programmi su misura",
+    desc: "Un percorso costruito sui tuoi obiettivi.",
   },
   {
-    name: "Luca Ferri",
-    role: "Performance coach",
-    image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80",
+    title: "Attrezzatura top",
+    desc: "Spazi e strumenti per ogni livello.",
   },
 ];
 
 export const plans = [
   {
-    name: "Piano Core",
-    price: "49",
-    period: "/mese",
-    features: ["Accesso completo in sala", "Classi di gruppo", "Spogliatoi", "App di tracking"],
+    name: "START",
+    price: "29",
+    period: "/ MESE",
+    blurb: "Per iniziare con costanza.",
+    features: ["Accesso sala pesi", "Scheda iniziale", "Area cardio"],
     featured: false,
   },
   {
-    name: "Piano Elite",
-    price: "89",
-    period: "/mese",
+    name: "FULL ACCESS",
+    price: "49",
+    period: "/ MESE",
+    blurb: "Per vivere la palestra al massimo.",
     features: [
-      "Tutto il Core",
-      "HIIT illimitato",
-      "2 sessioni PT / mese",
-      "Sauna e recovery",
-      "Prenotazione prioritaria",
+      "Tutti i servizi Start",
+      "Corsi fitness inclusi",
+      "1 check con coach / mese",
+      "Accesso area funzionale",
     ],
     featured: true,
   },
-];
-
-export const stats = [
-  { value: "10+", label: "Anni di esperienza" },
-  { value: "25+", label: "Coach esperti" },
-  { value: "2500+", label: "Membri attivi" },
-  { value: "98%", label: "Tasso di successo" },
+  {
+    name: "COACH PRO",
+    price: "89",
+    period: "/ MESE",
+    blurb: "Per un percorso seguito da vicino.",
+    features: [
+      "Tutto Full Access",
+      "2 sessioni personal",
+      "Programma personalizzato",
+    ],
+    featured: false,
+  },
 ];
 
 export const testimonials = [
   {
-    text: "IRON CLUB ha cambiato il mio modo di allenarmi. Più forte, più concentrato, parte di una vera community.",
-    name: "Marco B.",
+    text: "Finalmente una palestra dove mi sento seguito e motivato.",
+    name: "MARCO R.",
+    meta: "Iscritto da 8 mesi",
   },
   {
-    text: "I coach ti spingono forte ma con metodo. La scelta migliore per la mia forma fisica.",
-    name: "Elena R.",
+    text: "I corsi sono il momento migliore della mia giornata.",
+    name: "GIULIA P.",
+    meta: "Iscritta da 1 anno",
   },
   {
-    text: "Spazio pulito, attrezzature serie, zero fronzoli. Esattamente quello che cercavo.",
-    name: "Davide S.",
+    text: "Ho ritrovato costanza e voglia di migliorarmi.",
+    name: "ALESSIO F.",
+    meta: "Iscritto da 6 mesi",
   },
 ];
