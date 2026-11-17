@@ -1,54 +1,64 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 export default function About() {
   return (
-    <section id="about" className="py-20 md:py-28 bg-iron-800">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+    <section id="about" className="py-20 md:py-28 bg-iron">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-stretch">
         <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          className="rounded-3xl border border-white/10 bg-iron-700 overflow-hidden"
         >
-          <p className="text-cyan text-sm uppercase tracking-[0.2em] font-semibold mb-3">
-            Chi siamo
-          </p>
-          <h2 className="font-display text-4xl md:text-5xl tracking-wide leading-tight">
-            NON È UNA PALESTRA.
-            <br />
-            <span className="text-cyan">È UN CLUB.</span>
-          </h2>
-          <p className="mt-6 text-white/70 leading-relaxed text-lg">
-            IRON CLUB è pensata per chi vuole risultati concreti: forza, composizione
-            corporea e performance. Niente distrazioni, attrezzature di livello e un team
-            che ti segue passo dopo passo.
-          </p>
-          <div className="mt-8 grid grid-cols-3 gap-6">
-            {[
-              ["500+", "Membri"],
-              ["12", "Coach"],
-              ["7", "Giorni / sett."],
-            ].map(([n, l]) => (
-              <div key={l}>
-                <p className="font-display text-3xl text-cyan">{n}</p>
-                <p className="text-sm text-white/50 mt-1">{l}</p>
-              </div>
-            ))}
+          <div className="relative aspect-[4/3]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80"
+              alt="Gym floor"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="p-6 md:p-8">
+            <h2 className="font-display text-3xl md:text-4xl tracking-wide leading-tight">
+              Discover a Gym That Trains You to Be{" "}
+              <span className="text-lime">Stronger, Fitter,</span> and More Focused
+            </h2>
           </div>
         </motion.div>
+
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative aspect-[4/5] rounded-2xl overflow-hidden"
+          className="flex flex-col gap-6"
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=900&q=80"
-            alt="Allenamento IRON CLUB"
-            className="absolute inset-0 h-full w-full object-cover"
-          />
+          <div className="rounded-3xl bg-lime p-8 md:p-10 text-iron flex-1 flex flex-col justify-between">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wider opacity-70">
+                About IRON CLUB
+              </p>
+              <p className="mt-4 text-4xl md:text-5xl font-display tracking-wide leading-none">
+                Trusted by Over
+                <br />
+                1,000 Members
+              </p>
+            </div>
+            <p className="mt-6 text-iron/80 text-sm leading-relaxed">
+              At IRON CLUB, our community isn&apos;t just showing up — they&apos;re leveling up.
+              From newcomers to elite athletes, every member pushes harder and supports
+              one another through every rep.
+            </p>
+          </div>
+          <a
+            href="#programs"
+            className="inline-flex items-center gap-2 self-start rounded-full border border-white/20 px-5 py-2.5 text-sm font-semibold text-white hover:border-lime hover:text-lime transition"
+          >
+            Read More About Us
+            <ArrowRight className="h-4 w-4" />
+          </a>
         </motion.div>
       </div>
     </section>

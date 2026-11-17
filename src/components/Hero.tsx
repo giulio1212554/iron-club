@@ -1,75 +1,75 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { gym } from "@/data/content";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=80)",
-        }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-iron/80 via-iron/70 to-iron" />
-
-      <div className="relative z-10 mx-auto max-w-5xl px-4 text-center pt-24 pb-16">
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-cyan text-sm md:text-base uppercase tracking-[0.3em] font-semibold mb-4"
-        >
-          Welcome to
-        </motion.p>
+    <section className="relative min-h-screen pt-24 pb-0 overflow-hidden bg-iron">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-wide leading-none"
+          className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-wide leading-[0.95] max-w-4xl mx-auto"
         >
-          IRON <span className="text-cyan">CLUB</span>
+          Built for Your{" "}
+          <span className="text-lime">Fitness</span> Lifestyle.
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="mt-6 text-lg md:text-xl text-white/80 max-w-xl mx-auto"
+          transition={{ delay: 0.1 }}
+          className="mt-6 text-white/60 text-base md:text-lg max-w-xl mx-auto"
         >
-          {gym.tagline}
+          {gym.subtitle}
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
+          transition={{ delay: 0.2 }}
+          className="mt-8"
         >
           <a
             href="#membership"
-            className="rounded-full bg-cyan px-8 py-3.5 text-base font-bold text-iron hover:bg-cyan-400 transition shadow-lg shadow-cyan/20"
+            className="inline-flex items-center gap-2 rounded-full bg-lime px-7 py-3.5 text-sm font-bold text-iron hover:bg-lime-400 transition shadow-lg shadow-lime/20"
           >
-            JOIN NOW
-          </a>
-          <a
-            href="#programs"
-            className="rounded-full border border-white/30 px-8 py-3.5 text-base font-semibold text-white hover:border-cyan hover:text-cyan transition"
-          >
-            Scopri i programmi
+            BOOK NOW
+            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-iron text-lime">
+              <ArrowRight className="h-4 w-4" />
+            </span>
           </a>
         </motion.div>
+
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="mt-14 flex flex-wrap justify-center gap-8 text-sm text-white/60"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="mt-12 relative mx-auto max-w-4xl"
         >
-          <span>Aperti 06–23</span>
-          <span>·</span>
-          <span>Coach certificati</span>
-          <span>·</span>
-          <span>Milano</span>
+          <div className="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://images.unsplash.com/photo-1599058945522-28d584b6f14f?w=1400&q=80"
+              alt="Athlete training"
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-iron/60 to-transparent" />
+          </div>
         </motion.div>
+      </div>
+
+      <div className="mt-10 overflow-hidden border-y border-lime/30 bg-lime py-3">
+        <div className="animate-marquee flex whitespace-nowrap">
+          {Array.from({ length: 16 }).map((_, i) => (
+            <span
+              key={i}
+              className="mx-6 font-display text-2xl tracking-wider text-iron"
+            >
+              Workout
+            </span>
+          ))}
+        </div>
       </div>
     </section>
   );
