@@ -1,3 +1,5 @@
+"use client";
+
 import { benefits } from "@/data/content";
 
 export default function WhyUs() {
@@ -27,15 +29,24 @@ export default function WhyUs() {
           </ul>
         </div>
 
-        <div className="rounded-xl bg-iron p-8 min-h-[300px] flex flex-col justify-center">
-          <p className="text-lime text-xs font-bold">IL TUO PERCORSO</p>
-          <h3 className="mt-4 font-extrabold text-3xl md:text-[40px] leading-none text-snow">
-            DISCIPLINA
-            <br />
-            OGNI GIORNO.
-          </h3>
-          <div className="mt-10 h-[7px] w-full max-w-[420px] rounded bg-lime" />
-          <p className="mt-4 text-[13px] text-fog">Piccoli progressi. Grandi cambiamenti.</p>
+        <div className="relative rounded-xl overflow-hidden min-h-[320px] bg-iron">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=1000&q=80"
+            alt="Atleta in allenamento"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-iron via-iron/70 to-iron/30" />
+          <div className="relative z-10 p-8 min-h-[320px] flex flex-col justify-end">
+            <p className="text-lime text-xs font-bold">IL TUO PERCORSO</p>
+            <h3 className="mt-3 font-extrabold text-3xl md:text-[40px] leading-none text-snow">
+              DISCIPLINA
+              <br />
+              OGNI GIORNO.
+            </h3>
+            <div className="mt-8 h-[7px] w-full max-w-[420px] rounded bg-lime" />
+            <p className="mt-4 text-[13px] text-fog">Piccoli progressi. Grandi cambiamenti.</p>
+          </div>
         </div>
       </div>
     </section>

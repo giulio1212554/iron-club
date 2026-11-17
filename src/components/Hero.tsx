@@ -59,20 +59,29 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
-          className="relative rounded-[14px] bg-iron-card p-6 md:p-7 min-h-[380px] md:min-h-[470px] overflow-hidden"
+          className="relative rounded-[14px] overflow-hidden min-h-[380px] md:min-h-[470px] bg-iron-card"
         >
-          <div className="flex items-center justify-between">
-            <span className="text-lime text-xs font-bold">TRAIN HARD</span>
-            <span className="text-fog text-[11px] font-bold">01 / 03</span>
-          </div>
-          <div className="mt-6 rounded-[10px] bg-iron-muted p-6 md:p-8 min-h-[280px] flex flex-col justify-between">
-            <h2 className="font-extrabold text-4xl md:text-[54px] leading-none text-snow">
-              NO
-              <br />
-              EXCUSES.
-            </h2>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80"
+            alt="Allenamento in palestra"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-iron via-iron/50 to-iron/20" />
+
+          <div className="relative z-10 h-full min-h-[380px] md:min-h-[470px] p-6 md:p-7 flex flex-col justify-between">
+            <div className="flex items-center justify-between">
+              <span className="text-lime text-xs font-bold">TRAIN HARD</span>
+              <span className="text-fog text-[11px] font-bold">01 / 03</span>
+            </div>
+
             <div>
-              <div className="h-2 w-full max-w-[420px] rounded bg-lime" />
+              <h2 className="font-extrabold text-4xl md:text-[54px] leading-none text-snow drop-shadow">
+                NO
+                <br />
+                EXCUSES.
+              </h2>
+              <div className="mt-6 h-2 w-full max-w-[420px] rounded bg-lime" />
               <div className="mt-4 flex items-end justify-between gap-4">
                 <p className="text-fog text-[11px] font-bold tracking-wide">
                   STRENGTH &nbsp;/&nbsp; FOCUS &nbsp;/&nbsp; PROGRESS
