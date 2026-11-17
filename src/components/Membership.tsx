@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { plans } from "@/data/content";
 import { cn } from "@/lib/utils";
 
@@ -17,48 +18,59 @@ export default function Membership() {
           </h2>
         </div>
         <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-          {plans.map((plan, i) => (
-            <motion.div
-              key={plan.name}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className={cn(
-                "rounded-3xl border p-8 flex flex-col",
-                plan.featured
-                  ? "border-lime bg-lime text-iron"
-                  : "border-white/10 bg-iron-700 text-white"
-              )}
-            >
-              <h3 className="font-display text-2xl tracking-wide">{plan.name}</h3>
-              <p className="mt-4">
-                <span className="font-display text-5xl">€{plan.price}</span>
-                <span className={cn("text-sm", plan.featured ? "text-iron/60" : "text-white/50")}>
-                  {plan.period}
-                </span>
-              </p>
-              <ul className="mt-6 space-y-3 flex-1">
-                {plan.features.map((f) => (
-                  <li key={f} className="text-sm flex gap-2">
-                    <span>✓</span> {f}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="#contact"
+          {plans.map((plan, i) => {
+            const slug = plan.name.toLowerCase().includes("elite") ? "elite" : "core";
+            return (
+              <motion.div
+                key={plan.name}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
                 className={cn(
-                  "mt-8 block text-center rounded-full py-3 text-sm font-bold transition",
+                  "rounded-3xl border p-8 flex flex-col",
                   plan.featured
-                    ? "bg-iron text-lime hover:bg-iron-700"
-                    : "bg-lime text-iron hover:bg-lime-400"
+                    ? "border-lime bg-lime text-iron"
+                    : "border-white/10 bg-iron-700 text-white"
                 )}
               >
-                Inizia ora
-              </a>
-            </motion.div>
-          ))}
+                <h3 className="font-display text-2xl tracking-wide">{plan.name}</h3>
+                <p className="mt-4">
+                  <span className="font-display text-5xl">€{plan.price}</span>
+                  <span
+                    className={cn(
+                      "text-sm",
+                      plan.featured ? "text-iron/60" : "text-white/50"
+                    )}
+                  >
+                    {plan.period}
+                  </span>
+                </p>
+                <ul className="mt-6 space-y-3 flex-1">
+                  {plan.features.map((f) => (
+                    <li key={f} className="text-sm flex gap-2">
+                      <span>✓</span> {f}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href={`/checkout?plan=${slug}`}
+                  className={cn(
+                    "mt-8 block text-center rounded-full py-3 text-sm font-bold transition",
+                    plan.featured
+                      ? "bg-iron text-lime hover:bg-iron-700"
+                      : "bg-lime text-iron hover:bg-lime-400"
+                  )}
+                >
+                  Paga ora
+                </Link>
+              </motion.div>
+            );
+          })}
         </div>
+        <p className="mt-8 text-center text-xs text-white/30">
+          Checkout in modalità demo — nessun addebito reale.
+        </p>
       </div>
     </section>
   );
