@@ -6,11 +6,11 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { href: "#about", label: "Chi siamo" },
-  { href: "#programs", label: "Programmi" },
-  { href: "#trainers", label: "Coach" },
-  { href: "#membership", label: "Prezzi" },
-  { href: "#contact", label: "Contatti" },
+  { href: "#", label: "Home", active: true },
+  { href: "#why", label: "La palestra" },
+  { href: "#services", label: "Corsi" },
+  { href: "#services", label: "Personal training" },
+  { href: "#plans", label: "Abbonamenti" },
 ];
 
 export default function Header() {
@@ -18,7 +18,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -26,33 +26,43 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 inset-x-0 z-50 transition-all duration-300",
-        scrolled ? "bg-iron/95 backdrop-blur-md border-b border-white/5" : "bg-transparent"
+        "fixed top-0 inset-x-0 z-50 transition-colors",
+        scrolled ? "bg-iron/95 backdrop-blur-md border-b border-white/5" : "bg-iron"
       )}
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-16 md:h-18 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-lime text-iron font-bold text-sm">
-            IC
+      <div className="mx-auto max-w-[1440px] px-6 lg:px-[72px] h-[72px] md:h-[88px] flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-3">
+          <span className="size-[30px] rounded-[7px] bg-lime" />
+          <span className="font-extrabold text-[18px] md:text-[20px] tracking-tight text-snow">
+            IRON CLUB
           </span>
-          <span className="font-semibold text-white tracking-tight">IRON CLUB</span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-1 rounded-full bg-white/5 border border-white/10 px-2 py-1.5">
+        <nav className="hidden lg:flex items-center gap-8">
           {links.map((l) => (
             <a
-              key={l.href}
+              key={l.label}
               href={l.href}
-              className="rounded-full px-4 py-1.5 text-sm text-white/80 hover:text-iron hover:bg-lime transition"
+              className={cn(
+                "text-xs font-semibold transition",
+                l.active ? "text-lime" : "text-fog hover:text-snow"
+              )}
             >
               {l.label}
             </a>
           ))}
         </nav>
 
+        <a
+          href="#contact"
+          className="hidden lg:inline-flex items-center justify-center h-12 px-4 rounded-[6px] bg-lime text-ink text-xs font-bold hover:bg-lime-soft transition"
+        >
+          PRENOTA UNA PROVA
+        </a>
+
         <button
           type="button"
-          className="md:hidden p-2 text-white"
+          className="lg:hidden p-2 text-snow"
           onClick={() => setOpen(!open)}
           aria-label="Menu"
         >
@@ -61,17 +71,24 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-white/10 bg-iron px-4 py-6 space-y-3">
+        <div className="lg:hidden border-t border-white/5 bg-iron px-6 py-6 space-y-4">
           {links.map((l) => (
             <a
-              key={l.href}
+              key={l.label}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="block text-white/90 hover:text-lime py-2"
+              className="block text-sm text-fog hover:text-lime"
             >
               {l.label}
             </a>
           ))}
+          <a
+            href="#contact"
+            onClick={() => setOpen(false)}
+            className="block text-center rounded-[6px] bg-lime py-3 text-xs font-bold text-ink"
+          >
+            PRENOTA UNA PROVA
+          </a>
         </div>
       )}
     </header>
